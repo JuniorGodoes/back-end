@@ -18,5 +18,7 @@ app.get("/placascarros", saidas);
 
 app.get("/abastecimento", saidas);
 
+app.get("/usuariosapi", saidas);
+
 app.listen(8080);
 

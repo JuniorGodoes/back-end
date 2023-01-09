@@ -5,6 +5,7 @@ const saidasmotos = require('../Models/saidasmotos')
 const saidascarros = require('../Models/saidascarros')
 const placascarros = require('../Models/placascarros')
 const saidasgasolina = require('../Models/saidasgasolina')
+const usuariosapi = require('../Models/usuariosapi')
 const db = require('../db/db')
 
 router.get('/', async (req, res) => {
@@ -27,6 +28,12 @@ router.get('/placascarros', async (req, res) => {
 
 router.get('/abastecimento', async (req, res) => {
     const saidas = await saidasgasolina(db, Sequelize.DataTypes).findAll();
+
+    res.status(200).send(saidas)
+})
+
+router.get('/usuariosapi', async (req, res) => {
+    const saidas = await usuariosapi(db, Sequelize.DataTypes).findAll();
 
     res.status(200).send(saidas)
 })
