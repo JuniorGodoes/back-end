@@ -20,5 +20,7 @@ app.get("/abastecimento", saidas);
 
 app.get("/usuariosapi", saidas);
 
+app.get("/tecnicos", saidas);
+
 app.listen(8080);
 

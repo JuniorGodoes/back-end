@@ -8,6 +8,7 @@ const saidasgasolina = require('../Models/saidasgasolina')
 const usuariosapi = require('../Models/usuariosapi')
 const db = require('../db/db')
 
+
 router.get('/', async (req, res) => {
     const saidas = await saidasmotos(db, Sequelize.DataTypes).findAll();
 
